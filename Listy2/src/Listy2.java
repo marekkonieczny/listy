@@ -42,7 +42,7 @@ public   void drukuj()
         Value f = first;
         while(f != null)
         {
-            System.out.print(f.value + "  "); //wypisujemy listê
+            System.out.print(f.value + "  "); //wypisujemy listÄ™
             f = f.next;
         }
     }
@@ -60,7 +60,7 @@ public    void kasuj()
                 else
                     prev.next = f.next;
         }
-        System.gc(); // - wincyj nie mogê zrobiæ :>
+        System.gc(); // - wincyj nie mogÄ™ zrobiÄ‡ :>
     }
 
 
@@ -90,7 +90,7 @@ public   String szukaj(String s)
         	i++;
            }
         if (f == null) 
-        //	System.out.println("S³owa " + s + " nie ma na liœcie.");     	
+        //	System.out.println("SÅ‚owa " + s + " nie ma na liÅ›cie.");     	
     	return null;
         	else 	
         return String.valueOf(i);
@@ -113,7 +113,7 @@ public   String szukaj(String s)
         Value f = first;
         while(a.first != null)
         {
-            System.out.print(f.value + "  "); //wypisujemy listê
+            System.out.print(f.value + "  "); //wypisujemy listÄ™
             f = f.next;
         }
     }*/
@@ -123,16 +123,16 @@ public   String szukaj(String s)
 
 //---------------------------------------------------------------------------------------------
 
-/*dwukierunkowa wiazana
+/*dwukierunkowa wiazana cykliczna
 class Value
 {
-    int value;
+    String value;
     Value next;
     Value prev;
  
-    Value(int x, Value Next, Value Prev)
+    Value(String s, Value Next, Value Prev)
     {
-        value = x;
+        value = s;
         next = Next;
         prev = Prev;
     }
@@ -149,7 +149,7 @@ class List
         last = null;
     }
  
-    Value add(int x, Value v)
+    Value add(String s, Value v)
     {
         Value l;
         if(first == null)
@@ -162,7 +162,7 @@ class List
         }
         else
         {
-            l = new Value(x, v.next, v);
+            l = new Value(s, v.next, v);
  
             if(l.next != null)
                 v.next.prev = l;
@@ -178,12 +178,12 @@ class List
         return l;
     }
  
-    void delete(int x)
+    void delete(String s)
     {
         Value f = first;
         Value prev = null;
  
-        while (f != null && f.value != x) {
+        while (f != null && f.value != s) {
             prev = f ;
             f = f.next;
         }
@@ -208,16 +208,16 @@ class List
             }
     }
  
-    int searchValue(int x)
+    int searchValue(String s)
     {
         Value f = first;
         
-        if(f.value == x)
+        if(f.value == s)
             return f.value;
         else
             f = f.next;
  
-        while(f != null && f.value != x || f != first)
+        while(f != null && f.value != s || f != first)
             f = f.next;
  
         return f.value;
@@ -231,8 +231,8 @@ public class Listy2 {
  
     public static void main(String[] args) {
  
-        List l1 = new List(); //tworzymy listê
-        List l2 = new List(); //tworzymy listê
+        List l1 = new List(); //tworzymy listÄ™
+        List l2 = new List(); //tworzymy listÄ™
        Value v1 = null;
 v1 = 
         l1.wstaw("a",v1); 
