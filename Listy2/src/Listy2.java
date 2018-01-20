@@ -160,4 +160,4 @@ public class Listy2 {
         System.out.print("Drukuje l1 bez powtorzen\n");
         l1.bezpowtorzen();
     }
-}
+} 
